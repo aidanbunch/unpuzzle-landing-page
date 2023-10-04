@@ -1,5 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
+import Navbar from "./Navbar";
 
 export default function HomeComponent() {
   return (
@@ -10,19 +12,8 @@ export default function HomeComponent() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <div className="min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-        <nav>
-          <div className="mx-auto px-10">
-            <div className="flex h-16 items-center justify-between">
-              <div className="flex items-center gap-3">
-                <img className="h-8 w-auto" src="/logo.png" alt="Logo" />
-                <span className="ml-2 text-xl font-bold text-white">
-                  Unpuzzle
-                </span>
-              </div>
-            </div>
-          </div>
-        </nav>
-        <main className="flex flex-col items-center justify-center pt-0">
+        <Navbar />
+        <main className="flex flex-col items-center justify-center pb-12 pt-28">
           <div className="container flex flex-col items-center justify-center px-4">
             <h1
               className="text-center text-8xl font-extrabold leading-tight tracking-tight text-white"
@@ -97,6 +88,31 @@ export default function HomeComponent() {
               </a>
             </div>
           </div>
+          <section
+            id="about"
+            className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 py-8 pb-12 sm:px-6 md:py-16 lg:grid lg:gap-x-8 lg:px-8 lg:py-24 xl:grid-cols-2 xl:gap-x-12"
+          >
+            <div className="mx-auto flex max-w-[800px] flex-col gap-2 md:gap-4 xl:max-w-full">
+              <h2 className="mb-2 w-full text-3xl font-bold text-[#F3EEFF] md:text-5xl lg:text-5xl">
+                Join hundreds of other students
+              </h2>
+              <p className="mx-auto mt-4 max-w-3xl text-base text-[#c3b4fc] md:text-xl lg:text-xl xl:text-xl">
+                We made Unpuzzle to do one thing: Stop wasting time on Edpuzzles
+                and start learning.
+              </p>
+              <p className="mx-auto mt-4 max-w-3xl text-base text-[#c3b4fc] md:text-xl lg:text-xl xl:text-xl">
+                We integrate with Edpuzzle&apos;s API to retrieve assignments
+                and multiple choice questions for students, making it easy for
+                them to complete their assignments without the hassle of
+                watching the video or searching for answers.
+              </p>
+            </div>
+            <img
+              className=" max-h-full w-full rounded-xl"
+              src="https://user-images.githubusercontent.com/44245721/228969452-005abad2-8dd0-41bb-939d-0fa13bcda4d9.png"
+              alt="Analytics"
+            />
+          </section>
         </main>
       </div>
     </>
